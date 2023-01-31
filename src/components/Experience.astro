@@ -1,0 +1,92 @@
+<article>
+  <div>
+    <h2>Experiencia ⭐</h2>
+    <p>Mas de 1 año de experiencia en desarollo</p>
+  </div>
+  <div class="works">
+    <div class="worklabel min99">
+      <img src="./images/works/99min.png" alt="99minutos logo" />
+      <div>
+        <h3>Software Engineer</h3>
+        <p>99minutos Nov 2022 - Actual</p>
+      </div>
+    </div>
+    <div class="worklabel around">
+      <img src="./images/works/Around.png" alt="Around logo" />
+      <div>
+        <h3>React Native Engineer Jr</h3>
+        <p>Around Abr 2022 - Nov 2022</p>
+      </div>
+    </div>
+    <div class="worklabel matter">
+      <img src="./images/works/Matter.png" alt="Matter logo" />
+      <div>
+        <h3>Mobile Developer</h3>
+        <p>Around Dic 2021 - Jun 2022</p>
+      </div>
+    </div>
+    <div class="worklabel free">
+      <img src="./images/works/Freelance.png" alt="Freelance" />
+      <div>
+        <h3>Mobile Developer</h3>
+        <p>Freelance Jun 2021 - Dic 2021</p>
+      </div>
+    </div>
+  </div>
+</article>
+
+<style>
+  h2 {
+    font-size: xxx-large;
+    margin: 0%;
+  }
+  h3 {
+    font-size: xx-large;
+    margin: 0;
+  }
+  article {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    margin-bottom: 5rem;
+  }
+  p {
+    margin: 0%;
+    font-size: large;
+  }
+  img {
+    height: 5rem;
+    border-radius: 50%;
+  }
+  .works {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .worklabel {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+
+  h3 {
+    transition: ease-out 200ms;
+  }
+
+  .min99:hover > div > h3 {
+    color: #85c440;
+  }
+
+  .around:hover > div > h3 {
+    color: #fd8898;
+  }
+
+  .matter:hover > div > h3 {
+    color: #f74b73;
+  }
+
+  .free:hover > div > h3 {
+    color: #d0bea9;
+  }
+</style>
