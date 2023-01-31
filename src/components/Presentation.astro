@@ -1,0 +1,71 @@
+<main class="cover">
+  <img alt="avatar" src="./avatar.png" class="avatar" />
+  <div class="text">
+    <p class="frase">
+      Hola, soy Damián y
+      <br />
+      <span class="siglo">Programar es la magia del siglo XXI</span>
+    </p>
+    <h1>Developer Frontend & Mobile</h1>
+    <p class="resume">
+      Me gusta desarrollar productos y programas que los usuarios puedan
+      interactuar, el código es una herramienta para llegar a la meta
+    </p>
+  </div>
+</main>
+
+<style>
+  .siglo {
+    color: #a288ae;
+  }
+  .avatar {
+    aspect-ratio: auto;
+    width: 30%;
+    transform: translatey(0px);
+    animation: float 5s ease-in-out infinite;
+  }
+  .cover {
+    margin: 10rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+  }
+
+  h1 {
+    font-size: 56px;
+    margin: 0;
+  }
+
+  .frase {
+    transform: rotate(-5deg);
+    font-size: large;
+    font-weight: bold;
+  }
+
+  .resume {
+    font-size: 22px;
+  }
+
+  @keyframes float {
+    0% {
+      box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+      transform: translatey(0px);
+    }
+    50% {
+      box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+      transform: translatey(-20px);
+    }
+    100% {
+      box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+      transform: translatey(0px);
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .cover {
+      flex-wrap: wrap;
+      align-items: center;
+    }
+  }
+</style>
