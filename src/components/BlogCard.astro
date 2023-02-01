@@ -1,0 +1,58 @@
+---
+export interface Props {
+  title: string;
+  date: string;
+  photo: string;
+  url: string;
+}
+
+const { title, date, photo, url } = Astro.props;
+---
+
+<a href={url} class="card">
+  <img alt="photoCover" src={photo} />
+  <div class="body">
+    <h3>{title}</h3>
+    <p class="date">{date}</p>
+  </div>
+</a>
+
+<style>
+  .card {
+    border-radius: 2rem;
+    background: rgba(255, 255, 255, 0.01);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.6px);
+    -webkit-backdrop-filter: blur(4.6px);
+    border: 1px solid rgba(255, 255, 255, 0.115);
+  }
+  .body {
+    padding: 0rem 2rem 0rem 2rem;
+  }
+  .date {
+    text-align: end;
+    font-size: medium;
+  }
+  a {
+    display: block;
+    max-width: 350px;
+    transition: 250ms;
+    overflow: hidden;
+    height: 100%;
+  }
+  a:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 0px 42px 9px rgba(101, 112, 191, 0.32);
+    -webkit-box-shadow: 0px 0px 42px 9px rgba(101, 112, 191, 0.32);
+    -moz-box-shadow: 0px 0px 42px 9px rgba(101, 112, 191, 0.32);
+  }
+  img {
+    width: 100%;
+    padding: 1rem 0;
+    aspect-ratio: 16/9;
+    max-height: 150px;
+  }
+  h3 {
+    margin: 0%;
+  }
+</style>

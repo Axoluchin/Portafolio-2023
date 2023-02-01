@@ -1,7 +1,49 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import BlogCard from "../../components/BlogCard.astro";
+
+interface MarkData {
+  title: string;
+  date: string;
+  photo: string;
+}
+
+const posts = await Astro.glob<MarkData>("./*.md");
 ---
 
 <Layout title="Blog">
-    <h1>Hola</h1>
+  <h1>Blog</h1>
+  <div class="cards">
+    {
+      posts.map(({ frontmatter, url }) => (
+        <BlogCard
+          date={frontmatter.date}
+          photo={frontmatter.photo}
+          title={frontmatter.title}
+          url={url || "/"}
+        />
+      ))
+    }
+  </div>
 </Layout>
+
+<style>
+  .cards {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 3rem;
+  }
+  h2 {
+    text-align: center;
+  }
+
+  @media only screen and (max-width: 800px) {
+    .cards {
+      display: grid;
+      grid-template-columns: auto;
+      justify-content: center;
+    }
+  }
+</style>

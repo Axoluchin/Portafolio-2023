@@ -1,18 +1,80 @@
-<header class="flex">
-  <h4>Axoluchin</h4>
-  <ul class="flex">
-    <li><a href="/">Portafolio</a></li>
-    <li><a href="/blog">Blog</a></li>
-    <li><a href="/">Videos</a></li>
-  </ul>
+<header>
+  <div class="flex">
+    <h4>Axoluchin</h4>
+    <ul class="flex list">
+      <li><a href="/">Portafolio</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <!-- <li><a href="/">Videos</a></li> -->
+      <ul class="social">
+        <li>
+          <a href="https://twitter.com/DamianHuchin" target="_blank"
+            ><i class="bx bxl-twitter"></i></a
+          >
+        </li>
+        <li>
+          <a href="https://github.com/Axoluchin" target="_blank"
+            ><i class="bx bxl-github"></i></a
+          >
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/damianhuchin/" target="_blank"
+            ><i class="bx bxl-linkedin-square"></i></a
+          >
+        </li>
+      </ul>
+    </ul>
+    <i id="menu" class="bx bx-menu"></i>
+  </div>
+  <div id="mini-menu" class="no-display">
+    <ul class="mini-list">
+      <li><a href="/">Portafolio</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <!-- <li><a href="/">Videos</a></li> -->
+    </ul>
+    <ul class="social">
+      <li>
+        <a href="https://twitter.com/DamianHuchin" target="_blank"
+          ><i class="bx bxl-twitter"></i></a
+        >
+      </li>
+      <li>
+        <a href="https://github.com/Axoluchin" target="_blank"
+          ><i class="bx bxl-github"></i></a
+        >
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/damianhuchin/" target="_blank"
+          ><i class="bx bxl-linkedin-square"></i></a
+        >
+      </li>
+    </ul>
+  </div>
 </header>
+
+<script>
+  const menuBtn = document.getElementById("menu") as HTMLElement;
+  menuBtn.onclick = function () {
+    click();
+  };
+  const click = () => {
+    const divMenu = document.getElementById("mini-menu") as HTMLElement;
+    const actualClass = divMenu.getAttribute("class") || "";
+    divMenu.setAttribute(
+      "class",
+      actualClass.includes("no-display")
+        ? actualClass.replace("no-display", "mini-list")
+        : actualClass.replace("mini-list", "no-display")
+    );
+  };
+</script>
 
 <style>
   header {
-    padding: 0 2rem;
+    padding: 1rem 2rem;
   }
-  h4{
+  h4 {
     font-size: x-large;
+    margin: 0%;
   }
   ul {
     list-style: none;
@@ -30,5 +92,68 @@
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
+  }
+  .social {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0%;
+  }
+  .bx {
+    transition: ease-in-out 200ms;
+  }
+  .bxl-twitter:hover {
+    color: #1a8cd8;
+  }
+  .bxl-github:hover {
+    color: #babbbd;
+  }
+  .bxl-linkedin-square:hover {
+    color: #0a65c1;
+  }
+  .bx-menu {
+    cursor: pointer;
+  }
+
+  .mini-list,
+  .no-display {
+    height: 0px;
+    transition: max-width 0.15s ease-out;
+    overflow: hidden;
+  }
+
+  #menu {
+    display: none;
+  }
+
+  @media only screen and (max-width: 800px) {
+    .list {
+      display: none;
+    }
+    .bx-menu {
+      display: block;
+      font-size: xx-large;
+    }
+    .mini-list {
+      height: auto;
+    }
+    .social {
+      justify-content: space-between;
+    }
+    .mini-list {
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    a {
+      padding-left: 0;
+    }
+    i {
+      font-size: xx-large;
+    }
+    #menu {
+      display: inline;
+    }
   }
 </style>
