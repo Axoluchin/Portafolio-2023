@@ -20,42 +20,47 @@
       </p>
       <p>Mi Stack de tecnologias son:</p>
       <ul>
-        <li class="blue">React Native</li>
-        <li class="gray">Expo</li>
-        <li class="blue">React</li>
-        <li class="gray">Nextjs</li>
-        <li class="purple">Vite</li>
-        <li class="blue">Zustand</li>
-        <li class="purple">Redux</li>
-        <li class="blue">Typescript</li>
-        <li class="blue">Tailwind CSS</li>
-        <li class="blue">Material UI</li>
-        <li class="orange">Firebase</li>
-        <li class="purple">GraphQL</li>
-        <li class="gray">Auth0</li>
-        <li class="orange">Nestjs</li>
+        <li class="blue"><i class="bx bxl-react"></i> React Native</li>
+        <li class="gray"><i class="bx bx-mobile-alt"></i> Expo</li>
+        <li class="blue"><i class="bx bxl-react"></i> React</li>
+        <li class="gray"><i class="bx bxl-react"></i> Nextjs</li>
+        <li class="purple"><i class="bx bxl-react"></i> Vite</li>
+        <li class="orange"><i class='bx bx-rocket' ></i> Astro</li>
+        <li class="blue"><i class="bx bxl-react"></i> Zustand</li>
+        <li class="purple"><i class="bx bxl-redux"></i> Redux</li>
+        <li class="blue"><i class="bx bxl-typescript"></i> Typescript</li>
+        <li class="blue"><i class="bx bxl-tailwind-css"></i> Tailwind</li>
+        <li class="blue"><i class="bx bxs-component"></i> Material UI</li>
+        <li class="orange"><i class="bx bxl-firebase"></i> Firebase</li>
+        <li class="purple"><i class="bx bxl-graphql"></i> GraphQL</li>
+        <li class="gray"><i class="bx bx-check-shield"></i> Auth0</li>
+        <li class="orange"><i class="bx bx-server"></i> Nestjs</li>
       </ul>
     </div>
-    <img alt="Rocket" src="./images/Rocket.png" class="image" />
+    <img alt="Rocket" src="./images/Rocket.png" class="image rocket" />
   </div>
 </article>
 
 <style>
   article {
     margin-bottom: 6rem;
-    font-size: 20px;
   }
   h2 {
     font-size: xxx-large;
+    margin: 0%;
   }
   ul {
     display: grid;
+    list-style: none;
     grid-template-columns: auto auto auto;
     gap: 1rem;
   }
   li {
     font-weight: bold;
     transition: ease-in 100ms;
+  }
+  p {
+    text-align: justify;
   }
   .blue:hover {
     color: #42a5f5;
@@ -75,5 +80,28 @@
   .flex {
     display: flex;
     align-items: flex-start;
+  }
+  @media only screen and (max-width: 800px) {
+    ul {
+      grid-template-columns: auto auto;
+      gap: 2rem 1rem;
+      padding: 0%;
+    }
+    .flex {
+      flex-wrap: wrap-reverse;
+    }
+    .rocket {
+      width: 100%;
+      max-inline-size: 100%;
+      block-size: auto;
+      aspect-ratio: 2/1;
+      object-fit: contain;
+    }
+    h2 {
+      font-size: xx-large;
+    }
+    p {
+      font-size: large;
+    }
   }
 </style>

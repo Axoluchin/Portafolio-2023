@@ -8,6 +8,8 @@ const { frontmatter } = Astro.props;
     <img class="cover" alt="Cover" src={frontmatter.photo} />
     <p class="date">{frontmatter.date}</p>
     <slot />
+    <div class="space"/>
+    <a href="/blog" class="back-btn"><i class='bx bx-arrow-back'></i> Volver al menu</a>
   </article>
 </Layout>
 
@@ -21,6 +23,7 @@ const { frontmatter } = Astro.props;
   }
   p {
     font-size: 24px;
+    text-align: justify;
   }
   pre {
     padding: 1rem;
@@ -28,7 +31,7 @@ const { frontmatter } = Astro.props;
     font-size: x-large;
   }
   article {
-    padding: 3rem;
+    padding: 1rem;
     background: rgba(255, 255, 255, 0.01);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(4.6px);
@@ -45,5 +48,22 @@ const { frontmatter } = Astro.props;
     margin: 0;
     text-align: end;
     font-size: medium;
+  }
+
+  .space {
+    height: 3rem;
+  }
+
+  @media only screen and (max-width: 800px) {
+    h1 {
+      text-align: center;
+      font-size: x-large;
+    }
+    h2 {
+      font-size: larger;
+    }
+    p {
+      font-size: medium;
+    }
   }
 </style>

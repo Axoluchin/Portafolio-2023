@@ -6,7 +6,10 @@
       <br />
       <span class="siglo">Programar es la magia del siglo XXI</span>
     </p>
-    <h1>Developer Frontend & Mobile</h1>
+    <h1>
+      Developer Frontend & Mobile <i class="bx bxl-react"></i><i
+        class="bx bx-mobile-alt"></i>
+    </h1>
     <p class="resume">
       Me gusta desarrollar productos y programas que los usuarios puedan
       interactuar, el código es una herramienta para llegar a la meta
@@ -47,6 +50,20 @@
     font-size: 22px;
   }
 
+  .bxl-react {
+    color: #61dafb;
+  }
+  .bx-mobile-alt {
+    background: #2fd37d;
+    background: radial-gradient(
+      ellipse farthest-corner at bottom left,
+      #2fd37d 0%,
+      #ffffff 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
   @keyframes float {
     0% {
       box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
@@ -62,10 +79,23 @@
     }
   }
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 800px) {
+    h1 {
+      font-size: 30px;
+    }
     .cover {
-      flex-wrap: wrap;
-      align-items: center;
+      display: block;
+    }
+    .avatar {
+      max-inline-size: 100%;
+      block-size: auto;
+      aspect-ratio: 2/1;
+      object-fit: contain;
+      width: 100%;
+      height: 40vh;
+    }
+    .cover {
+      margin: 2rem 0 6rem;
     }
   }
 </style>
