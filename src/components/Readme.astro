@@ -1,8 +1,8 @@
-<article>
-  <h2># README.md 📄</h2>
-  <div class="flex">
-    <div>
-      <p>
+<article class="mb-16">
+  <h2 class="text-3xl font-bold md:text-5xl mb-8"># README.md 📄</h2>
+  <div class="md:grid grid-cols-3">
+    <div class="col-span-2">
+      <p class="md:text-justify text-base md:text-lg mb-4">
         Empecé desarrollando Apps con Javascript en React Native y Expo, en
         cuestión de meses cambie a Typescript para mejorar la calidad de código
         y de los proyectos, después dando el salto a React con sus Frameworks
@@ -18,8 +18,8 @@
         estoy con el mundo del Backend y el desarrollo de aplicaciones móviles con
         código nativo.
       </p>
-      <p>Mi Stack de tecnologías son:</p>
-      <ul>
+      <p class="md:text-lg mb-6">Mi Stack de tecnologías son:</p>
+      <ul class="grid grid-cols-2 md:grid-cols-3 text-lg font-bold gap-y-6">
         <li class="blue"><i class="bx bxl-react"></i> React Native</li>
         <li class="gray"><i class="bx bx-mobile-alt"></i> Expo</li>
         <li class="blue"><i class="bx bxl-react"></i> React</li>
@@ -45,26 +45,6 @@
 </article>
 
 <style>
-  article {
-    margin-bottom: 6rem;
-  }
-  h2 {
-    font-size: xxx-large;
-    margin: 0%;
-  }
-  ul {
-    display: grid;
-    list-style: none;
-    grid-template-columns: auto auto auto;
-    gap: 1rem;
-  }
-  li {
-    font-weight: bold;
-    transition: ease-in 100ms;
-  }
-  p {
-    text-align: justify;
-  }
   .blue:hover {
     color: #42a5f5;
   }
@@ -81,33 +61,6 @@
     color: #bdbdbd;
   }
   .image {
-    width: 40%;
-  }
-  .flex {
-    display: flex;
-    align-items: flex-start;
-  }
-  @media only screen and (max-width: 800px) {
-    ul {
-      grid-template-columns: auto auto;
-      gap: 2rem 1rem;
-      padding: 0%;
-    }
-    .flex {
-      flex-wrap: wrap-reverse;
-    }
-    .rocket {
-      width: 100%;
-      max-inline-size: 100%;
-      block-size: auto;
-      aspect-ratio: 2/1;
-      object-fit: contain;
-    }
-    h2 {
-      font-size: xx-large;
-    }
-    p {
-      font-size: large;
-    }
+    width: 100%;
   }
 </style>
