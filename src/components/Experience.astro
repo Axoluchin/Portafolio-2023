@@ -3,6 +3,14 @@ import WorkLabel from "./WorkLabel.astro";
 
 const works = [
   {
+    color: "#8490e8",
+    company: "Orbi Finance",
+    photo: "./images/works/orbi.webp",
+    time: "Mar 2023 - Actual",
+    work: "Software Engineer",
+    icons: ["bx bxl-vuejs","bxl-react", "bxl-graphql", "bxl-typescript"],
+  },
+  {
     color: "#85c440",
     company: "99minutos",
     photo: "./images/works/99min.png",
@@ -44,16 +52,16 @@ const works = [
 ];
 ---
 
-<article>
+<article class="md:grid md:grid-cols-2 md:gap-8 mb-16">
   <div>
-    <h2>Experiencia ⭐</h2>
-    <p>
+    <h2 class="text-3xl font-bold md:text-5xl mb-4">Experiencia ⭐</h2>
+    <p class="mb-8 md:text-lg">
       Es los lugares donde he trabajado me ha tocado empezar proyectos desde
       cero, dar mantenimiento y agregar nuevas funciones, todo enfocado a
       producto y manteniendo un buen performance en los proyectos
     </p>
   </div>
-  <div class="works">
+  <div class="grid gap-4 md:gap-8">
     {
       works.map((data) => (
         <WorkLabel
@@ -68,39 +76,3 @@ const works = [
     }
   </div>
 </article>
-
-<style>
-  h2 {
-    font-size: xxx-large;
-    margin: 0;
-  }
-  article {
-    display: grid;
-    grid-template-columns: auto auto;
-    justify-content: space-between;
-    margin-bottom: 5rem;
-  }
-  p {
-    font-size: x-large;
-    width: 80%;
-    text-align: justify;
-  }
-  .works {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
-  @media only screen and (max-width: 800px) {
-    article {
-      grid-template-columns: auto;
-      gap: 2rem;
-    }
-    h2 {
-      font-size: 38px;
-    }
-    p{
-      width: auto;
-      font-size: large;
-    }
-  }
-</style>
