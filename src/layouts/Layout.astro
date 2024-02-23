@@ -8,7 +8,7 @@ export interface Props {
 const { title } = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -18,12 +18,15 @@ const { title } = Astro.props;
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
-    <meta name="description" content="Desarrollador Frontend y Mobile, experimentado con Nextjs, Expo, Typescript, React y React Native, ">
+    <meta
+      name="description"
+      content="Desarrollador Frontend y Mobile, experimentado con Nextjs, Expo, Typescript, React y React Native, "
+    />
     <title>{`${title} | Axoluchin`}</title>
   </head>
   <body>
     <Header />
-    <div class="stars twinkling clouds"/>
+    <div class="stars twinkling clouds"></div>
     <slot />
   </body>
 </html>
@@ -37,6 +40,7 @@ const { title } = Astro.props;
   body {
     max-width: 1100px;
     margin: auto;
+    padding-bottom: 10rem;
   }
   a {
     color: #f6f6f6;
@@ -58,7 +62,7 @@ const { title } = Astro.props;
   .stars {
     z-index: -1;
     background: #000 url("/images/stars.png") repeat top;
-	animation: move-twink-back 1000s linear infinite;
+    animation: move-twink-back 1000s linear infinite;
   }
 
   @keyframes move-twink-back {

@@ -7,8 +7,9 @@ const works = [
     company: "Orbi Finance",
     photo: "./images/works/orbi.webp",
     time: "Mar 2023 - Actual",
-    work: "Software Engineer",
-    icons: ["bx bxl-vuejs","bxl-react", "bxl-graphql", "bxl-typescript"],
+    work: "SSR Frontend",
+    icons: ["bx bxl-vuejs", "bxl-react", "bxl-graphql", "bxl-typescript"],
+    desc: "Desarrollando el frontend de herramientas internas con Nextjs, MUI, GraphQL con manejo de roles de acceso e internacionalización; migrando landing de presentación de Nuxt a Astro subiendo el SEO y performance de la página.",
   },
   {
     color: "#85c440",
@@ -17,6 +18,7 @@ const works = [
     time: "Nov 2022 - Mar 2023",
     work: "Software Engineer",
     icons: ["bxl-react", "bx-server", "bx-check-shield", "bxl-typescript"],
+    desc: "Desarrollo de micro frontend de herramienta interna de consulta de clientes para empleados fuera de TI, adaptación de diseños en Figma a web de app 99 minutos.",
   },
   {
     color: "#fd8898",
@@ -32,6 +34,7 @@ const works = [
       "bx-check-shield",
       "bxl-typescript",
     ],
+    desc: "Desarrollo de app mobile con Expo para consulta de servicios de locación, apoyando en desarrollo de interfaces backoffice con SSR en Nextjs y MUI.",
   },
   {
     color: "#f74b73",
@@ -40,6 +43,7 @@ const works = [
     time: "Dic 2021 - Jun 2022",
     work: "React Native Engineer",
     icons: ["bx-mobile-alt", "bxl-firebase", "bxl-typescript"],
+    desc: "Desarrollo de app Matter con Expo, Firebase y Typescript.",
   },
   {
     color: "#d0bea9",
@@ -48,31 +52,23 @@ const works = [
     time: "Jun 2021 - Dic 2021",
     work: "Mobile Developer",
     icons: ["bx-mobile-alt", "bxl-firebase"],
+    desc: "Desarrollo de apps para pequeños negocios, veterinaria, grupo de football americano, proyectos escolares.",
   },
 ];
 ---
 
-<article class="md:grid md:grid-cols-2 md:gap-8 mb-16">
+<article class="mb-16">
   <div>
     <h2 class="text-3xl font-bold md:text-5xl mb-4">Experiencia ⭐</h2>
-    <p class="mb-8 md:text-lg">
-      Es los lugares donde he trabajado me ha tocado empezar proyectos desde
-      cero, dar mantenimiento y agregar nuevas funciones, todo enfocado a
-      producto y manteniendo un buen performance en los proyectos
-    </p>
-  </div>
-  <div class="grid gap-4 md:gap-8">
-    {
-      works.map((data) => (
-        <WorkLabel
-          color={data.color}
-          company={data.company}
-          photo={data.photo}
-          time={data.time}
-          work={data.work}
-          icons={data.icons}
-        />
-      ))
-    }
+
+    <ol class="relative border-s border-gray-200">
+      {works.map((data) => <WorkLabel {...data} />)}
+      <li class="ms-4">
+        <div
+          class="absolute w-3 h-3 bg-gray-200 rounded-full -mt-10 -start-1.5 border border-white"
+        >
+        </div>
+      </li>
+    </ol>
   </div>
 </article>
